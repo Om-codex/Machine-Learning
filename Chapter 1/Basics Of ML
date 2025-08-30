@@ -1,2 +1,118 @@
 Basics Of ML
 Question and their answer to cover the basics of ML
+
+## 1. How would you define Machine Learning?
+
+👉 Machine Learning is the field of study that gives computers the ability to learn from data and improve performance on a task without being explicitly programmed.
+
+## 2. Can you name four types of problems where it shines?
+
+Spam filtering
+
+Image recognition (e.g., face detection)
+
+Speech recognition (e.g., Siri, Alexa)
+
+Recommendation systems (e.g., Netflix, Amazon)
+
+## 3. What is a labeled training set?
+
+👉 A dataset where each input example is paired with the correct output (label).
+Example: emails (input) + spam/ham (label).
+
+## 4. What are the two most common supervised tasks?
+
+Classification (predicting categories → spam or not spam)
+
+Regression (predicting values → house prices)
+
+## 5. Can you name four common unsupervised tasks?
+
+Clustering (e.g., customer segmentation)
+
+Dimensionality reduction (e.g., PCA)
+
+Anomaly detection (e.g., fraud detection)
+
+Association rule learning (e.g., “people who buy X also buy Y”)
+
+## 6. What type of ML algorithm would you use to allow a robot to walk in various unknown terrains?
+
+👉 Reinforcement Learning (agent learns by trial and error with rewards/penalties).
+
+## 7. What type of algorithm would you use to segment your customers into multiple groups?
+
+👉 Clustering (unsupervised learning).
+
+## 8. Would you frame spam detection as supervised or unsupervised?
+
+👉 Supervised learning (emails labeled as spam/ham).
+
+## 9. What is an online learning system?
+
+👉 A system that learns incrementally as new data arrives, instead of retraining from scratch.
+
+## 10. What is out-of-core learning?
+
+👉 Training on datasets too large to fit in memory, by streaming data in mini-batches from disk.
+
+## 11. What type of algorithm relies on a similarity measure to make predictions?
+
+👉 Instance-based learning (e.g., k-Nearest Neighbors).
+
+## 12. Difference between model parameter and hyperparameter?
+
+Parameter: learned by the algorithm during training (e.g., weights in linear regression).
+
+Hyperparameter: set before training, controls learning (e.g., learning rate, k in kNN).
+
+## 13. What do model-based learning algorithms search for?
+
+👉 They search for the best parameters that minimize a cost function.
+Most common strategy → Gradient Descent.
+Predictions → Use the learned function (hypothesis) to make predictions on new data.
+
+## 14. Can you name four main challenges in ML?
+
+Insufficient data
+
+Poor quality data (noise, missing values)
+
+Overfitting (model too complex)
+
+Underfitting (model too simple)
+
+## 15. If your model performs great on training data but poorly on new instances, what is happening?
+
+👉 Overfitting.
+✅ Solutions:
+
+Get more training data
+
+Reduce model complexity / add regularization
+
+Clean the training data
+
+## 16. What is a test set, and why use it?
+
+👉 A dataset kept aside to evaluate generalization of the final trained model.
+It simulates performance on unseen data.
+
+## 17. What is the purpose of a validation set?
+
+👉 Used to tune hyperparameters and select the best model, without touching the test set.
+
+## 18. What is the train-dev set, when do you need it, and how do you use it?
+
+👉 Proposed by Andrew Ng for data mismatch problems.
+
+It’s a subset of the training data.
+
+Used to check if the model overfits the training data (vs. mismatch with validation/test).
+
+Helps diagnose whether poor validation results come from overfitting or data mismatch.
+
+## 19. What can go wrong if you tune hyperparameters using the test set?
+
+👉 You would leak information from the test set → model indirectly fits the test set → evaluation becomes biased.
+Result: Test performance is overly optimistic, and you can’t trust it anymore.
